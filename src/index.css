@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  li {
+    @apply p-4
+  }
+
+  /* button {
+    @apply text-white border bg-blue-600 border-blue-600
+    hover:bg-transparent hover:text-blue-600 rounded-md
+  } */
+}
+
+
+body{
+  max-width: 1920px;
+  margin: auto;
+  height: 4574px;
+  overflow-x: hidden;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.outline-text {
+  
+  width: 20%;
+  font-family: 'Urbanist';
+  /* font-size: 46px; */
+  font-weight: 900;
+  color: transparent;
+  line-height: 68px;
+  -webkit-text-stroke-width: 2px; 
+  -webkit-text-stroke-color: #343444;
+  text-stroke-width: 2px;
+  text-stroke-color: #343444;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 1410px; /* Your container width */
+  height: 514px; /* Your container height */
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background: #333;
+}
+
+.slider-dots .active::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.slider-track {
+  margin-left: 10px; /* Adjust this value to bring the first card into view */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    
+  }
+}
+
+.bg-hero {
+  background-image: var(--bg-image);
+  background-size: 90% auto, 90% auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+@media (max-width: 1024px) {
+  .bg-hero {
+    
+    background-position: center, center;
+  
+  }
+}
+
+.bg-hero {
+  background-image: var(--bg-image);
+  background-size: 85% auto, 90% auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+@media (max-width: 1024px) {
+  .bg-hero {
+    
+    background-position: center, center;
+    background-size: 99% auto, 80% auto;
+  }
+}
+
+.hero{
+  width: clamp(1024px, 70%, 20rem);
+}
+
+
+
+
+
+
+
+
+
